@@ -1,4 +1,8 @@
-
 h1 {
     color: #213547;
+}
+
+.details {
+    outline: 1px solid gray;
+    width: 1fr;
 }

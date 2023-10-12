@@ -4,10 +4,13 @@
 // Main component of details
 function Details(){
     return (
-        <div>
+        <div className="details">
             <h1>Personal info</h1>
             <form className="detailsInput">
-                <input className="name"></input>
+                <label>
+                    Name:
+                    <input className="name"></input>
+                </label>
             </form>
         </div>
     )

@@ -3,6 +3,9 @@ h1 {
 }
 
 .details {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
     outline: 1px solid gray;
     width: 1fr;
 }

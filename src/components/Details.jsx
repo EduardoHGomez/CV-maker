@@ -11,6 +11,16 @@ function Details(){
                     Name:
                     <input className="name"></input>
                 </label>
+                <br></br>
+                <label>
+                    Email:
+                    <input className="name" type="email"></input>
+                </label>
+                <br></br>
+                <label>
+                    Phone number:
+                    <input className="name" type="number"></input>
+                </label>
             </form>
         </div>
     )

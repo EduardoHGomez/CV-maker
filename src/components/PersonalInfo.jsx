@@ -1,8 +1,11 @@
 // Personal info details
-
+import React, {useState} from "react";
 
 // Main component of details
-function Details(){
+function PersonalInfo(){
+    const [personalInformation, setPersonalInformation] = useState({'name': 'John', 'email': 'john@example.com',
+                                                                    'phone': '12-3456-7890'})
+
     return (
         <div className="details">
             <h1>Personal info</h1>
@@ -26,4 +29,4 @@ function Details(){
     )
 }
 
-export default Details
+export default PersonalInfo; 

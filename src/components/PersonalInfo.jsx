@@ -22,7 +22,7 @@ function PersonalInfo(){
                     <input className="name" type="text" value={nameInput}
                     onChange={(event) => {
                         setNameInput(event.target.value);
-                        setPersonalInformation({...setPersonalInformation, name: event.target.value});
+                        setPersonalInformation({...personalInformation, name: event.target.value});
                     }}/>
                 </label>
                 <br></br>
@@ -31,7 +31,7 @@ function PersonalInfo(){
                     <input className="email" type="email" value={emailInput}
                     onChange={(event) => {
                         setEmailInput(event.target.value);
-                        setPersonalInformation({...setPersonalInformation, email: event.target.value});
+                        setPersonalInformation({...personalInformation, email: event.target.value});
                     }}/>
                 </label>
                 <br></br>
@@ -40,7 +40,7 @@ function PersonalInfo(){
                     <input className="number" type="tel" value={phoneInput}
                     onChange={(event) => {
                         setPhoneInput(event.target.value);
-                        setPersonalInformation({...setPersonalInformation, phone: event.target.value});
+                        setPersonalInformation({...personalInformation, phone: event.target.value});
                     }}/>
                 </label>
             </form>

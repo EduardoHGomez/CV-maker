@@ -10,6 +10,7 @@ function PersonalInfo(){
         'phone': '12-3456-7890'
     })
     const [nameInput, setNameInput] = useState(personalInformation.name);
+    const [emailInput, setEmailInput] = useState(personalInformation.email);
 
     return (
         <div className="details">
@@ -26,7 +27,11 @@ function PersonalInfo(){
                 <br></br>
                 <label>
                     Email:
-                    <input className="email" type="email"></input>
+                    <input className="email" type="email" value={emailInput}
+                    onChange={(event) => {
+                        setEmailInput(event.target.value);
+                        setPersonalInformation({...setPersonalInformation, email: event.target.value});
+                    }}/>
                 </label>
                 <br></br>
                 <label>

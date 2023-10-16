@@ -1,6 +1,6 @@
 // CV Template, will only get data
 
-function CVTemplate() {
+function CVTemplate(props) {
 
     return (
         <div className="cvContainer">

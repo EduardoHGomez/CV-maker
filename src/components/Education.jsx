@@ -1,6 +1,14 @@
 
 
 function Education() {
+    const [educationInfo, setEducationInfo] = useState({
+        'school': 'school1',
+        'start-date': '2020-01-01',
+        'graduation-date': '2024-01-01'
+    })
+
+    // Inputs
+    const [schooInput, setSchoolInput] = useState('school1');
 
     return (
         <div className="education">
@@ -8,7 +16,11 @@ function Education() {
             <form className="educationInput">
                 <label>
                     School:
-                    <input className="education-school"></input>
+                    <input className="text" type="tel" value={phoneInput}
+                    onChange={(event) => {
+                        setPhoneInput(event.target.value);
+                        setPersonalInformation({...setPersonalInformation, phone: event.target.value});
+                    }}/>
                 </label>
                 <br></br>
                 <label>

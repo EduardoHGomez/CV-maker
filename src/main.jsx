@@ -11,6 +11,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <div className="mainContainer">
         <PersonalInfo/>
+        <Education/>
+        <Education/>
         <CVTemplate/>
     </div>
   </React.StrictMode>,

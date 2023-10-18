@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client'
 // import './index.css'
 import PersonalInfo from './components/PersonalInfo'
 import Education from './components/Education'
+import Experience from './components/Experience'
 import './App.css'
 import CVTemplate from './components/CVTemplate'
 
@@ -12,7 +13,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <div className="mainContainer">
         <PersonalInfo/>
         <Education/>
-        <Education/>
+        <Experience/>
         <CVTemplate/>
     </div>
   </React.StrictMode>,

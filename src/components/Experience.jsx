@@ -1,11 +1,16 @@
 
 
 function Experience() {
+    const [companyInput, setCompanyInput] = useState('Company 1');
+
     return (
         <div className="experienceContainer">
             <label>
                 Company name:
-                <input className="experienceCompany"></input>
+                <input className="experienceCompnay" type="text" value={companyInput}
+                onChange={(event) => {
+                    setCompanyInput(event.target.value);
+                }}/>
             </label>
             <label>
                 Position:

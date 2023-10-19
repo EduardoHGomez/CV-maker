@@ -3,8 +3,10 @@
 function CVTemplate(props) {
 
     return (
-        <div className="cvContainer">
-            <h1>CV Template</h1>
+        <div className="CVContainer">
+            <div className="cvHeader">
+                <h1>CV Template</h1>
+            </div>
         </div>
     );
 

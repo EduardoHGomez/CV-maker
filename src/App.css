@@ -22,4 +22,12 @@ h1 {
     flex: 1fr 1fr;
 }
 
+.myContainer {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.cvpart {
+    display:
+}
 

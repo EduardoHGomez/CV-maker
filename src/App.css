@@ -28,6 +28,6 @@ h1 {
 }
 
 .cvpart {
-    display:
+    outline: 1px solid green;
 }
 

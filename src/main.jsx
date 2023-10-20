@@ -10,8 +10,13 @@ import CVTemplate from './components/CVTemplate'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <div className="mainContainer">
-        <PersonalInfo/>
+    <div className="myContainer">
+        <div className="mainContainer">
+            <PersonalInfo/>
+        </div>
+        <div className="cvpart">
+            Hola
+        </div>
     </div>
   </React.StrictMode>,
 )

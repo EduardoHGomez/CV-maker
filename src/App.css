@@ -24,10 +24,24 @@ h1 {
 
 .myContainer {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 2fr;
 }
 
 .cvpart {
     outline: 1px solid green;
 }
 
+.inputContainer {
+    outline: 1px solid red;
+}
+
+.cvContainerHeader {
+    outline: 1px solid black;
+    height: 5rem;
+    background-color: #04364A;
+    color: #EEEEEE;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+}

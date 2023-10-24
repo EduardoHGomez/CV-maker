@@ -7,9 +7,10 @@ import Education from './components/Education'
 import Experience from './components/Experience'
 import './App.css'
 import CVTemplate from './components/CVTemplate'
+import ParentTemplate from './components/ParentTemplate'
 
-ReactDOM.createRoot(document.getElementById('root')).render(
-  <React.StrictMode>
+/*
+
     <div className="myContainer">
         <div className="inputContainer">
             <PersonalInfo/>
@@ -18,5 +19,13 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <CVTemplate></CVTemplate>
         </div>
     </div>
-  </React.StrictMode>,
+
+
+
+*/
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        <ParentTemplate/>
+    </React.StrictMode>,
 )

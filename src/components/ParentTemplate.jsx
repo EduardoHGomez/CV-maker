@@ -1,18 +1,18 @@
 import React from 'react'
+import {useState} from "react";
 import ReactDOM from 'react-dom/client'
-import Experience from './components/Experience'
-import Education from './components/Education'
-
+import Experience from './Experience'
 // This file was made for testing purposes: view the effect of an input to a cv template
 
-function MainContainer() {
+function ParentTemplate() {
     const [textInput, setTextInput] = useState('');
 
     return (
         <div>
             <h1>New Container</h1>
-            <
 
         </div>
     );
 }
+
+export default ParentTemplate;

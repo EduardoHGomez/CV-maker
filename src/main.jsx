@@ -15,9 +15,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
             <PersonalInfo/>
         </div>
         <div className="cvpart">
-            <div className="cvContainerHeader">
-                Name here
-            </div>
+            <CVTemplate></CVTemplate>
         </div>
     </div>
   </React.StrictMode>,

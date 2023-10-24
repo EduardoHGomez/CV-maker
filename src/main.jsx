@@ -2,12 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 // import App from './App.jsx'
 // import './index.css'
-import PersonalInfo from './components/PersonalInfo'
-import Education from './components/Education'
-import Experience from './components/Experience'
 import './App.css'
+import PersonalInfo from './components/PersonalInfo'
 import CVTemplate from './components/CVTemplate'
-import ParentTemplate from './components/ParentTemplate'
 
 /*
 
@@ -26,6 +23,6 @@ import ParentTemplate from './components/ParentTemplate'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <ParentTemplate/>
+        <PersonalInfo/>
     </React.StrictMode>,
 )

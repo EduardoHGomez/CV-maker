@@ -9,7 +9,7 @@ function PersonalInfo(){
         'name': 'John', 
         'email': 'john@example.com',
         'phone': '12-3456-7890'
-    })
+    });
     const [nameInput, setNameInput] = useState(personalInformation.name);
     const [emailInput, setEmailInput] = useState(personalInformation.email);
     const [phoneInput, setPhoneInput] = useState(personalInformation.phone);
@@ -48,7 +48,7 @@ function PersonalInfo(){
                 </form>
             </div>
             <div>
-                <CVTemplate/>
+                <CVTemplate nameInput='Name' emailInput='Email' phoneInput='Phone'/>
             </div>
         </div>
     );

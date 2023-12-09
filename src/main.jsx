@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom/client'
 import './App.css'
 import PersonalInfo from './components/PersonalInfo'
 import CVTemplate from './components/CVTemplate'
+import Greeting from './examples/Animals.jsx'
 
 /*
 
@@ -23,6 +24,6 @@ import CVTemplate from './components/CVTemplate'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <PersonalInfo/>
+        <Greeting></Greeting>
     </React.StrictMode>,
 )

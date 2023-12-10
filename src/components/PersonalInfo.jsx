@@ -17,31 +17,44 @@ function PersonalInfo(){
 
     return (
         <div>
-            <h1>Personal Details</h1>
-            <label>
-                Name:
-                <input 
-                    type="text"
-                    value={name}
-                    onChange={(event) => setName(event.target.value)}
-                />
-            </label>
-            <label>
-                Email:
-                <input 
-                    type="text"
-                    value={email}
-                    onChange={(event) => setEmail(event.target.value)}
-                />
-            </label>
-            <label>
-                Phone:
-                <input
-                    type="text"
-                    value={phone}
-                    onChange={(event) => setPhone(event.target.value)}
-                />
-            </label>
+            <div>
+                <h1>Personal Details</h1>
+                <label>
+                    Name:
+                    <input 
+                        type="text"
+                        value={name}
+                        onChange={(event) => setName(event.target.value)}
+                    />
+                </label>
+                <label>
+                    Email:
+                    <input 
+                        type="text"
+                        value={email}
+                        onChange={(event) => setEmail(event.target.value)}
+                    />
+                </label>
+                <label>
+                    Phone:
+                    <input
+                        type="text"
+                        value={phone}
+                        onChange={(event) => setPhone(event.target.value)}
+                    />
+                </label>
+            </div>
+
+            <div>
+                <h1>Name:</h1>
+                <p>{name}</p>
+                <h1>Email:</h1>
+                <p>{email}</p>
+                <h1>:</h1>
+                <p>{name}</p>
+                <h1>Name:</h1>
+                <p>{name}</p>
+            </div>
         </div>
     );
 }

@@ -25,6 +25,5 @@ import Animals from './examples/Animals.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-    <Animals></Animals>
     </React.StrictMode>,
 )

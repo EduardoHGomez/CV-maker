@@ -26,5 +26,6 @@ import App1 from './examples/App1.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
+    <PersonalInfo></PersonalInfo>
     </React.StrictMode>,
 )

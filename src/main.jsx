@@ -6,6 +6,7 @@ import './App.css'
 import PersonalInfo from './components/PersonalInfo'
 import CVTemplate from './components/CVTemplate'
 import Greeting from './examples/Animals.jsx'
+import Animals from './examples/Animals.jsx'
 
 /*
 
@@ -24,6 +25,6 @@ import Greeting from './examples/Animals.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <Greeting></Greeting>
+    <Animals></Animals>
     </React.StrictMode>,
 )

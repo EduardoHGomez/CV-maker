@@ -7,3 +7,7 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
+.rightColumn {
+    outline: #243547 1px solid;
+}

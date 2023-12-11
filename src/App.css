@@ -2,46 +2,8 @@ h1 {
     color: #213547;
 }
 
-.mainContainer {
+
+.container {
     display: grid;
     grid-template-columns: 1fr 1fr;
-}
-
-.details {
-    display: flex;
-    flex-direction: column;
-    padding: 6px;
-    outline: 1px solid gray;
-    width: 1fr;
-}
-
-.cvContainer {
-    display: flex;
-    flex-direction: column;
-    outline: 1px solid blue;
-    flex: 1fr 1fr;
-}
-
-.myContainer {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-}
-
-.cvpart {
-    outline: 1px solid green;
-}
-
-.inputContainer {
-    outline: 1px solid red;
-}
-
-.cvContainerHeader {
-    outline: 1px solid black;
-    height: 5rem;
-    background-color: #04364A;
-    color: #EEEEEE;
-    display: flex;
-    text-align: center;
-    justify-content: center;
-
 }

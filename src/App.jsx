@@ -4,10 +4,11 @@ import BasicInfoView from './components/views/BasicInfoView'
 import BasicInfoEditor from './components/editors/BasicInfoEditor'
 
 function App() {
+
 	return (
-		<>
-			<BasicInfoView/>;
-		</>
+		<div className="container">
+			<BasicInfoEditor/>
+		</div>
 	);
 }
 

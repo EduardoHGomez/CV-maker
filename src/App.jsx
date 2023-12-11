@@ -1,12 +1,12 @@
 import { useState } from 'react'
 import './App.css'
-import './components/views/BasicInfoView'
-import './components/editors/BasicInfoEditor'
+import BasicInfoView from './components/views/BasicInfoView'
+import BasicInfoEditor from './components/editors/BasicInfoEditor'
 
 function App() {
 	return (
 		<>
-			<BasicInfoView></BasicInfoView>
+			<BasicInfoView/>;
 		</>
 	);
 }

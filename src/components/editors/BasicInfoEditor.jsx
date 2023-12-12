@@ -8,11 +8,6 @@ function BasicInfoEditor() {
         phone: '44 3245 5521',
     });
 
-    // ---------- Input fields -----------
-    const [name, setName] = useState('Name');
-    const [email, setEmail] = useState('email@example.com');
-    const [phone, setPhone] = useState('33 0000 00000');
-
     return (
         <div>
             <div>
@@ -21,35 +16,35 @@ function BasicInfoEditor() {
                     Name:
                     <input 
                         type="text"
-                        value={name}
-                        onChange={(event) => setName(event.target.value)}
+                        value={personalInfo.name}
+                        onChange={(event) => setPersonalInfo({...personalInfo, name: event.target.value})}
                     />
                 </label>
                 <label>
                     Email:
                     <input 
                         type="text"
-                        value={email}
-                        onChange={(event) => setEmail(event.target.value)}
+                        value={personalInfo.email}
+                        onChange={(event) => setPersonalInfo({...personalInfo, email: event.target.value})}
                     />
                 </label>
                 <label>
                     Phone:
                     <input
                         type="text"
-                        value={phone}
-                        onChange={(event) => setPhone(event.target.value)}
+                        value={personalInfo.phone}
+                        onChange={(event) => setPersonalInfo({...personalInfo, phone: event.target.value})}
                     />
                 </label>
             </div>
 
             <div>
                 <h1>Name:</h1>
-                <p>{name}</p>
+                <p>{personalInfo.name}</p>
                 <h1>Email:</h1>
-                <p>{email}</p>
+                <p>{personalInfo.email}</p>
                 <h1>Phone:</h1>
-                <p>{phone}</p>
+                <p>{personalInfo.phone}</p>
             </div>
         </div>
     );

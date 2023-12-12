@@ -20,10 +20,60 @@ function App() {
 
 	return (
 		<div className="container">
+
 			<div>
                 <h1>Personal Details</h1>
+				<label>
+					<input 
+						type="text"
+						value={data.BasicInfo.name}
+						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+					/>
+				</label>
+                <label>
+                    Email:
+                    <input 
+                        type="text"
+                        value={data.BasicInfo.email}
+                        onChange={(event) => handleBasicInfoChange({...data.BasicInfo, email: event.target.value})}
+                    />
+                </label>
+                <label>
+                    Phone:
+                    <input
+                        type="text"
+                        value={data.BasicInfo.phone}
+                        onChange={(event) => handleBasicInfoChange({...data.BasicInfo, phone: event.target.value})}
+                    />
+                </label>
 
-			</div>
+				<hr/>
+
+				<label>
+					<input 
+						type="text"
+						value={data.BasicInfo.name}
+						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+					/>
+				</label>
+                <label>
+                    Email:
+                    <input 
+                        type="text"
+                        value={data.BasicInfo.email}
+                        onChange={(event) => handleBasicInfoChange({...data.BasicInfo, email: event.target.value})}
+                    />
+                </label>
+                <label>
+                    Phone:
+                    <input
+                        type="text"
+                        value={data.BasicInfo.phone}
+                        onChange={(event) => handleBasicInfoChange({...data.BasicInfo, phone: event.target.value})}
+                    />
+                </label>
+
+			</div> {/* Left column div*/}
 			<BasicInfoView data={data.BasicInfo}/>
 		</div>
 	);

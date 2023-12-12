@@ -4,7 +4,6 @@ import App from './App.jsx'
 // import './index.css'
 import './App.css'
 import PersonalInfo from './components/views/BasicInfoView.jsx'
-import Greeting from './examples/Animals.jsx'
 import Animals from './examples/Animals.jsx'
 import App1 from './examples/App1.jsx'
 

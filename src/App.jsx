@@ -4,16 +4,27 @@ import BasicInfoView from './components/views/BasicInfoView'
 import BasicInfoEditor from './components/editors/BasicInfoEditor'
 
 function App() {
-	const data = {
-		name: 'John',
-		email: 'john@email.com',
-		phone: '33-0000-1111'
-	}
+
+	const [data, setData] = useState({
+		BasicInfo: {
+			name: 'Travis',
+			email: 'travis@email.com',
+			phone: '44-0000-1111'
+		}
+	});
+
+	const handleBasicInfoChange = (newBasicInfo) => {
+		
+		setData({...data, BasicInfo: newBasicInfo});
+	};
 
 	return (
 		<div className="container">
-			<BasicInfoEditor/>
-			<BasicInfoView data={data}/>
+			<div>
+                <h1>Personal Details</h1>
+
+			</div>
+			<BasicInfoView data={data.BasicInfo}/>
 		</div>
 	);
 }

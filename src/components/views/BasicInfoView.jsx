@@ -4,7 +4,7 @@ import React, {useState} from "react";
 // Main component of details
 function BasicInfoView({data}){
     return (
-        <div className="rightColumn">
+        <div> 
             <h1>Basic information</h1>
             <p><b>Name: </b>{data.name}</p>
             <p><b>Email: </b>{data.email}</p>

@@ -10,7 +10,12 @@ function ExperienceItem(props){
     console.log(experienceInformation);
     return (
         <>
-
+            <p><b>Company: </b>{experienceInformation.companyName}</p>
+            <p><b>Position title: </b>{experienceInformation.positionTitle}</p>
+            <p><b>Description: </b>{experienceInformation.description}</p>
+            <p><b>Start date: </b>{experienceInformation.startDate}</p>
+            <p><b>End date: </b>{experienceInformation.endDate}</p>
+            <hr/>
         </>
     );
 }

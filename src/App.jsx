@@ -82,6 +82,7 @@ function App() {
 				<hr/>
 
 				<div className="EducationEditorContainer">
+					<h1>Education</h1>
 					<label> School: 
 						<input 
 							type="text"
@@ -122,9 +123,7 @@ function App() {
 				<hr/>
 
 				<div>
-					<h4>Company 1</h4>
-
-					<h4>Company 1</h4>
+					<h1>Experience</h1>
 				</div>
 
 			</div> {/* Left column div*/}

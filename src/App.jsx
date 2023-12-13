@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import BasicInfoView from './components/views/BasicInfoView'
 import EducationView from './components/views/EducationView'
+import ExperienceView from './components/views/ExperienceView'
 
 function App() {
 
@@ -17,7 +18,25 @@ function App() {
 			startDate: '12-August-2022',
 			endDate: '01-December-2025',
 			location: 'Zapopan',
-		}
+		},
+		ExperienceInfo:
+			[
+				{
+					'companyName': 'Coco',
+					'positionTitle': 'Associate Produce',
+					'description': 'I completed my daily tasks',
+					'startDate': '01-January-1998',
+					'endDate': '15-December-2022'
+				},
+				{
+					'companyName': 'Dunder Mifflin',
+					'positionTitle': 'Regional Manager',
+					'description': 'Just hanging around',
+					'startDate': '01-February-2004',
+					'endDate': '07-August-2013'
+				}
+			]
+		
 	});
 
 	const handleBasicInfoChange = (newBasicInfo) => {
@@ -100,11 +119,20 @@ function App() {
 					</label>
 				</div>
 
+				<hr/>
+
+				<div>
+					<h4>Company 1</h4>
+
+					<h4>Company 1</h4>
+				</div>
+
 			</div> {/* Left column div*/}
 
 			<div className='rightColumn'>
 				<BasicInfoView data={data.BasicInfo}/>
 				<EducationView data={data.EducationInfo}/>
+				<ExperienceView experienceList={data.ExperienceInfo}/>
 			</div>
 		</div>
 	);

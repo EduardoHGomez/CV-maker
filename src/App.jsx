@@ -24,8 +24,8 @@ function App() {
 		setData({...data, BasicInfo: newBasicInfo});
 	};
 
-	const handleEducationChange= (newEdication) => {
-		setData({...data, EducationInfo: newEdication});
+	const handleEducationChange= (newEducation) => {
+		setData({...data, EducationInfo: newEducation});
 	};
 
 	return (

@@ -28,6 +28,50 @@ body {
 }
 
 
+.EducationInfoView {
+    padding: 0 4%;
+}
+
+.EduationInfoViewHeader {
+    display: grid;
+}
+
+.EducationInfoView h2 {
+    margin: 0px;
+    margin-top: 1%;
+    margin-bottom: 4px;
+    color: rgb(34, 34, 34);
+    justify-self: center;
+}
+
+.EducationInfoViewBody {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.EducationInfoViewBodyLeft {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.EducationInfoViewBodyRight {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+}
+
+.EducationInfoViewBody p{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+.EducationInfoViewBody b{
+    margin: 0px;
+    margin-bottom: 5px;
+}
+
+
 /* -------- Input containers */
 .BasicInfoEditorContainer {
     outline: #223549 1px solid;

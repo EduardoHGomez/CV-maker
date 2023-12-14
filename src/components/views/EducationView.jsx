@@ -12,13 +12,20 @@ function EducationView(props) {
 
 
     return (
-        <div>
-            <h1>Education</h1>
-            <p>School: {school}</p> 
-            <p>Degree: {degree}</p> 
-            <p>Start date: {startDate}</p> 
-            <p>End date: {endDate}</p> 
-            <p>Location: {location}</p> 
+        <div className="EducationInfoView">
+            <div className="EduationInfoViewHeader">
+                <h2>Education</h2>
+            </div>
+            <div className="EducationInfoViewBody">
+                <div className="EducationInfoViewBodyLeft">
+                    <b>{degree}</b>
+                    <b>{school}</b>
+                </div>
+                <div className="EducationInfoViewBodyRight">
+                    <p>{startDate} - {endDate}</p> 
+                    <p>{location}</p> 
+                </div>
+            </div>
         </div>
     );
 }

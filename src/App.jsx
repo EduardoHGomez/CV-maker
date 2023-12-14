@@ -13,11 +13,11 @@ function App() {
 			phone: '+38 44-0000-1111'
 		},
 		EducationInfo: {
-			school: 'ITESO',
-			degree: 'Bachelors Degree',
-			startDate: '12-August-2022',
-			endDate: '01-December-2025',
-			location: 'Zapopan',
+			school: 'London City University',
+			degree: 'B.Eng. in Computer Systems',
+			startDate: '12/08/2022',
+			endDate: '01/12/2026',
+			location: 'Zapopan, Jalisco, Mexico',
 		},
 		ExperienceInfo:
 			[

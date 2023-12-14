@@ -9,6 +9,7 @@ body {
 
 .rightColumn {
     outline: #142536 1px solid;
+    font-family: sans-serif;
 }
 
 /* ------- View containers ---*/
@@ -20,7 +21,6 @@ body {
     align-items: center;
     justify-content: center;
     height: 20%;
-    font-family: sans-serif;
 }
 
 .BasicInfoView h1{

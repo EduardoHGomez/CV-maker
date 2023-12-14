@@ -7,16 +7,19 @@ function ExperienceItem(props){
         experienceInformation
     } = props;
 
-    console.log(experienceInformation);
     return (
-        <>
-            <p><b>Company: </b>{experienceInformation.companyName}</p>
-            <p><b>Position title: </b>{experienceInformation.positionTitle}</p>
-            <p><b>Description: </b>{experienceInformation.description}</p>
-            <p><b>Start date: </b>{experienceInformation.startDate}</p>
-            <p><b>End date: </b>{experienceInformation.endDate}</p>
-            <hr/>
-        </>
+        <div className="ExperienceItem">
+            <div>
+                <p>{experienceInformation.startDate} - {experienceInformation.endDate} </p>
+                <p>{experienceInformation.location}</p>
+            </div>
+            <div>
+                <p><b>{experienceInformation.companyName}</b></p>
+                <p><i>{experienceInformation.positionTitle}</i></p>
+                <p>{experienceInformation.description}</p>
+                <br></br>
+            </div>
+        </div>
     );
 }
 
@@ -27,12 +30,16 @@ function ExperienceView(props) {
     const experienceList = props.experienceList;
 
     return (
-        <div>
-            <h1>Experience</h1>
-            {experienceList.map((job) => {
-                    return <ExperienceItem key={job.companyName} experienceInformation={job}/>;
-                }
-            )}
+        <div className="ExperienceContainer">
+        <div className="ExperienceContainer-header" style={{display: 'grid'}}>
+            <h2>Professional Experience</h2>
+        </div>
+            <div>
+                {experienceList.map((job) => {
+                        return <ExperienceItem key={job.companyName} experienceInformation={job}/>;
+                    }
+                )}
+            </div>
         </div>
     )
 

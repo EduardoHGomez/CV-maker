@@ -20,7 +20,7 @@ body {
     color: white;
     align-items: center;
     justify-content: center;
-    height: 20%;
+    height: 130px;
 }
 
 .BasicInfoView h1{
@@ -70,6 +70,34 @@ body {
     margin: 0px;
     margin-bottom: 5px;
 }
+
+/* Experience */
+.ExperienceContainer {
+    font-family: sans-serif;
+    padding: 0 4%;
+}
+
+.ExperienceContainer-header h2{
+    margin: 0px;
+    margin-top: 1%;
+    margin-bottom: 4px;
+    color: rgb(34, 34, 34);
+    justify-self: center;
+}
+
+.ExperienceItem {
+    display: grid;
+    grid-template-columns: .5fr 2fr;
+    grid-gap: 4.5%;
+}
+
+.ExperienceItem p{
+    margin: 0px;
+    margin-bottom: 1.4%;
+}
+
+
+
 
 
 /* -------- Input containers */

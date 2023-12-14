@@ -25,15 +25,17 @@ function App() {
 					'companyName': 'Coco',
 					'positionTitle': 'Associate Producer',
 					'description': 'I completed my daily tasks',
-					'startDate': '01-January-1998',
-					'endDate': '15-December-2022'
+					'startDate': '01/1998',
+					'endDate': '04/2022',
+					'location': 'New York City, US'
 				},
 				{
 					'companyName': 'Dunder Mifflin',
 					'positionTitle': 'Regional Manager',
 					'description': 'Just hanging around',
-					'startDate': '01-February-2004',
-					'endDate': '07-August-2013'
+					'startDate': '02/2004',
+					'endDate': '08/2013',
+					'location': 'Guadalajara, Mexico'
 				}
 			]
 		

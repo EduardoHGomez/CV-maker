@@ -4,11 +4,9 @@ import React, {useState} from "react";
 // Main component of details
 function BasicInfoView({data}){
     return (
-        <div> 
-            <h1>Basic information</h1>
-            <p><b>Name: </b>{data.name}</p>
-            <p><b>Email: </b>{data.email}</p>
-            <p><b>Phone: </b>{data.phone}</p>
+        <div className="BasicInfoView"> 
+        <h2>{data.name}</h2>
+        <span>{data.email} | {data.phone}</span>
         </div>
     );
 }

@@ -2,16 +2,34 @@ h1 {
     color: #213547;
 }
 
+body {
+    background-color: #fdfbfb;
+}
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.3fr;
 }
 
 .rightColumn {
-    outline: #243547 1px solid;
+    outline: #142536 1px solid;
 }
 
+/* ------- View containers ---*/
+.BasicInfoView {
+    display: flex;
+    flex-direction: column;
+    background-color: #142536;
+    color: white;
+    justify-content: center;
+}
+
+.BasicInfoView h2{
+    margin: 0px;
+}
+
+
+/* -------- Input containers */
 .BasicInfoEditorContainer {
     outline: #223549 1px solid;
 }

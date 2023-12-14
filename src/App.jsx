@@ -23,7 +23,7 @@ function App() {
 			[
 				{
 					'companyName': 'Coco',
-					'positionTitle': 'Associate Produce',
+					'positionTitle': 'Associate Producer',
 					'description': 'I completed my daily tasks',
 					'startDate': '01-January-1998',
 					'endDate': '15-December-2022'

@@ -1,7 +1,3 @@
-h1 {
-    color: #213547;
-}
-
 body {
     background-color: #fdfbfb;
 }
@@ -19,12 +15,15 @@ body {
 .BasicInfoView {
     display: flex;
     flex-direction: column;
-    background-color: #142536;
+    background-color: rgb(23, 35, 76);
     color: white;
+    align-items: center;
     justify-content: center;
+    height: 20%;
+    font-family: sans-serif;
 }
 
-.BasicInfoView h2{
+.BasicInfoView h1{
     margin: 0px;
 }
 

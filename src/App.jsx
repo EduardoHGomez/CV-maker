@@ -8,9 +8,9 @@ function App() {
 
 	const [data, setData] = useState({
 		BasicInfo: {
-			name: 'Travis',
-			email: 'travis@email.com',
-			phone: '44-0000-1111'
+			name: 'Nathan Fielder',
+			email: 'nathan@email.com',
+			phone: '+38 44-0000-1111'
 		},
 		EducationInfo: {
 			school: 'ITESO',

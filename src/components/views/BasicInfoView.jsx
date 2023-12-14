@@ -5,8 +5,9 @@ import React, {useState} from "react";
 function BasicInfoView({data}){
     return (
         <div className="BasicInfoView"> 
-        <h2>{data.name}</h2>
-        <span>{data.email} | {data.phone}</span>
+        <h1>{data.name}</h1>
+        <br/>
+        <span><i className="fa-regular fa-envelope"></i> {data.email} <i class="fa-solid fa-phone"></i> {data.phone}</span>
         </div>
     );
 }

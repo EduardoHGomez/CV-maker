@@ -101,7 +101,44 @@ body {
 
 
 /* -------- Input containers */
-.BasicInfoEditor {
+.leftColumn {
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.inputEditor{
     font-family: 'Nunito Sans', sans-serif;
-    outline: #223549 1px solid;
+    border: 1px solid rgb(221, 217, 210);
+    border-radius: 0.5rem;
+    padding: 10px 5% 15px;
+    width: 60%;
+}
+
+.inputEditor-input {
+    border-radius: 0.5rem;
+    border: 1px solid #f5f8fa;
+    background-color: rgb(243, 244, 246);
+    width: 95%;
+    height: 1.35rem;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+
+.inputEditor-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inputEditor h2{
+    margin: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+.inputEditor i{
+    margin-right: 10px;
 }

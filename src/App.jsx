@@ -53,27 +53,35 @@ function App() {
 		<div className="container">
 
 			<div className="leftColumn">
-				<div className="BasicInfoEditor">
-					<h1>Personal Details</h1>
+				<div className="inputEditor">
+					<div className="inputEditor-header">
+						<i class="fa-solid fa-user"></i>
+						<h2>Personal Details</h2>
+					</div>
 					<label>
-						Name
-						<input 
+						<b>Name</b>
+					    <br/>
+						<input className='inputEditor-input'
 							type="text"
 							value={data.BasicInfo.name}
 							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
 						/>
 					</label>
+					<br/>
 					<label>
-						Email:
-						<input 
+						<b>Email</b>
+						<br/>
+						<input className='inputEditor-input'
 							type="text"
 							value={data.BasicInfo.email}
 							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, email: event.target.value})}
 						/>
 					</label>
+					<br/>
 					<label>
-						Phone:
-						<input
+						<b>Phone</b>
+					    <br/>
+						<input className='inputEditor-input'
 							type="text"
 							value={data.BasicInfo.phone}
 							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, phone: event.target.value})}
@@ -83,37 +91,48 @@ function App() {
 
 				<hr/>
 
-				<div className="EducationEditorContainer">
-					<h1>Education</h1>
-					<label> School: 
+				<div className="inputEditor">
+					<div className='inputEditor-header'>
+						<h2>Education</h2>
+					</div>
+					<label> School
+						<br/>
 						<input 
 							type="text"
 							value={data.EducationInfo.school}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, school: event.target.value})}
 						/>
 					</label>
-					<label> Degree: 
+					<br/>
+					<label> Degree
+						<br/>
 						<input 
 							type="text"
 							value={data.EducationInfo.degree}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, degree: event.target.value})}
 						/>
 					</label>
-					<label> Start Date: 
+					<br/>
+					<label> Start Date
+					<br/>
 						<input 
 							type="text"
 							value={data.EducationInfo.startDate}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, startDate: event.target.value})}
 						/>
 					</label>
-					<label> End Date: 
+					<br/>
+					<label> End Date
+						<br/>
 						<input 
 							type="text"
 							value={data.EducationInfo.endDate}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, endDate: event.target.value})}
 						/>
 					</label>
-					<label> Location: 
+					<br/>
+					<label> Location
+						<br/>
 						<input 
 							type="text"
 							value={data.EducationInfo.location}

@@ -1,5 +1,5 @@
 body {
-    background-color: #fdfbfb;
+    background-color: rgb(243, 241, 238);
 }
 
 .container {
@@ -10,6 +10,7 @@ body {
 .rightColumn {
     outline: #142536 1px solid;
     font-family: sans-serif;
+    background-color: white;
 }
 
 /* ------- View containers ---*/
@@ -29,6 +30,7 @@ body {
 
 
 .EducationInfoView {
+    background-color: white;
     padding: 0 4%;
 }
 
@@ -47,6 +49,7 @@ body {
 .EducationInfoViewBody {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    background-color: white;
 }
 
 .EducationInfoViewBodyLeft {
@@ -75,6 +78,7 @@ body {
 .ExperienceContainer {
     font-family: sans-serif;
     padding: 0 4%;
+    background-color: white;
 }
 
 .ExperienceContainer-header h2{
@@ -102,29 +106,38 @@ body {
 
 /* -------- Input containers */
 .leftColumn {
-    margin-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.leftColumn b {
+    font-size: 1.15rem;
+}
+
 
 .inputEditor{
     font-family: 'Nunito Sans', sans-serif;
-    border: 1px solid rgb(221, 217, 210);
+    border: 1px solid white; 
     border-radius: 0.5rem;
     padding: 10px 5% 15px;
     width: 60%;
+    background-color: white;
+    display: grid;
+    grid-row-gap: 10px;
+    box-shadow: 0px 0px 26px 0px rgba(222,224,224,1);
 }
 
 .inputEditor-input {
     border-radius: 0.5rem;
-    border: 1px solid #f5f8fa;
+    border: 1px solid white;
     background-color: rgb(243, 244, 246);
     width: 95%;
-    height: 1.35rem;
+    height: 2rem;
     font-family: 'Nunito Sans', sans-serif;
+    padding: 0px 0.5rem;
+    font-size: medium;
 }
 
 

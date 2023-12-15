@@ -60,27 +60,22 @@ function App() {
 					</div>
 					<label>
 						<b>Name</b>
-					    <br/>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.BasicInfo.name}
 							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
 						/>
 					</label>
-					<br/>
 					<label>
 						<b>Email</b>
-						<br/>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.BasicInfo.email}
 							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, email: event.target.value})}
 						/>
 					</label>
-					<br/>
 					<label>
 						<b>Phone</b>
-					    <br/>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.BasicInfo.phone}
@@ -93,46 +88,43 @@ function App() {
 
 				<div className="inputEditor">
 					<div className='inputEditor-header'>
+						<i class="fa-solid fa-user-graduate"></i>
 						<h2>Education</h2>
 					</div>
-					<label> School
-						<br/>
+					<label> 
+						<b>School</b>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.school}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, school: event.target.value})}
 						/>
 					</label>
-					<br/>
-					<label> Degree
-						<br/>
+					<label>
+						<b>Degree</b>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.degree}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, degree: event.target.value})}
 						/>
 					</label>
-					<br/>
-					<label> Start Date
-					<br/>
+					<label>
+						<b>Start date</b>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.startDate}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, startDate: event.target.value})}
 						/>
 					</label>
-					<br/>
-					<label> End Date
-						<br/>
+					<label> 
+						<b>End date</b>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.endDate}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, endDate: event.target.value})}
 						/>
 					</label>
-					<br/>
-					<label> Location
-						<br/>
+					<label>
+						<b>Location</b>
 						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.location}

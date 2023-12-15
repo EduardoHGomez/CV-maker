@@ -53,10 +53,11 @@ function App() {
 		<div className="container">
 
 			<div className="leftColumn">
-				<div className="inputEditor">
+				<div draggable="true" cursor className="inputEditor">
 					<div className="inputEditor-header">
 						<i class="fa-solid fa-user"></i>
 						<h2>Personal Details</h2>
+						<i class="fa-solid fa-angle-down"></i>
 					</div>
 					<label>
 						<b>Name</b>
@@ -90,6 +91,7 @@ function App() {
 					<div className='inputEditor-header'>
 						<i class="fa-solid fa-user-graduate"></i>
 						<h2>Education</h2>
+						<i class="fa-solid fa-angle-down"></i>
 					</div>
 					<label> 
 						<b>School</b>

@@ -147,6 +147,11 @@ body {
     align-items: center;
 }
 
+.inputEditor-header i:last-child{
+    margin-top: 3px;
+    margin-left: 10px;
+}
+
 .inputEditor h2{
     margin: 0px;
     font-family: 'Nunito Sans', sans-serif;

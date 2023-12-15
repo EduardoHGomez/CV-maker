@@ -97,7 +97,7 @@ function App() {
 					</div>
 					<label> School
 						<br/>
-						<input 
+						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.school}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, school: event.target.value})}
@@ -106,7 +106,7 @@ function App() {
 					<br/>
 					<label> Degree
 						<br/>
-						<input 
+						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.degree}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, degree: event.target.value})}
@@ -115,7 +115,7 @@ function App() {
 					<br/>
 					<label> Start Date
 					<br/>
-						<input 
+						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.startDate}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, startDate: event.target.value})}
@@ -124,7 +124,7 @@ function App() {
 					<br/>
 					<label> End Date
 						<br/>
-						<input 
+						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.endDate}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, endDate: event.target.value})}
@@ -133,7 +133,7 @@ function App() {
 					<br/>
 					<label> Location
 						<br/>
-						<input 
+						<input className='inputEditor-input'
 							type="text"
 							value={data.EducationInfo.location}
 							onChange={(event) => handleEducationChange({...data.EducationInfo, location: event.target.value})}

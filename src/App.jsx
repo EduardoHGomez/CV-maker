@@ -52,8 +52,8 @@ function App() {
 	return (
 		<div className="container">
 
-			<div>
-				<div className="BasicInfoEditorContainer">
+			<div className="leftColumn">
+				<div className="BasicInfoEditor">
 					<h1>Personal Details</h1>
 					<label>
 						Name

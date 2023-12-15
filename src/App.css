@@ -101,6 +101,7 @@ body {
 
 
 /* -------- Input containers */
-.BasicInfoEditorContainer {
+.BasicInfoEditor {
+    font-family: 'Nunito Sans', sans-serif;
     outline: #223549 1px solid;
 }

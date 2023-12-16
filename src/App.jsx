@@ -4,6 +4,12 @@ import BasicInfoView from './components/views/BasicInfoView'
 import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 
+
+function addExperience() {
+	alert("Hola Mundo");
+}
+
+
 function App() {
 	const [showEducation, setShowEducation] = useState(false);
 	const [showBasicInfo, setShowBasicInfo] = useState(true);
@@ -168,8 +174,10 @@ function App() {
 					
 						{ showExperience ? 
 							<div className="inputEditor-addExperience">
+							<button onClick={addExperience}>
 								<span>
-								<i class="fa-solid fa-plus"></i>Add experience</span>	
+								<i className="fa-solid fa-plus"></i>Add experience</span>	
+							</button>
 							</div>
 
 							: null

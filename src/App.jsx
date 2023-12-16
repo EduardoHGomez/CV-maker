@@ -5,15 +5,38 @@ import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 
 
-function addExperience() {
-	alert("Hola Mundo");
-}
-
 
 function App() {
 	const [showEducation, setShowEducation] = useState(false);
 	const [showBasicInfo, setShowBasicInfo] = useState(true);
 	const [showExperience, setShowExperience] = useState(true);
+	const [showAddExperienceButton, setShowAddExperienceButton] = useState(true);
+
+	function addExperience() {
+		setShowAddExperienceButton(false);
+	}
+
+	function ExperienceContainer() {
+
+		if (showAddExperienceButton){
+			return (	
+
+				<div className="inputEditor-addExperience">
+					<button onClick={addExperience}>
+						<span>
+						<i className="fa-solid fa-plus"></i>Add experience</span>	
+					</button>
+				</div>
+			)
+		}
+		else {
+			return (
+				<>
+				</>
+			)
+		}
+
+	}
 
 	const [data, setData] = useState({
 		BasicInfo: {
@@ -62,10 +85,11 @@ function App() {
 		<div className="container">
 
 			<div className="leftColumn">
-				<div className="inputEditor" 
+
+				<div className="inputEditor">
+					<div className="inputEditor-header"
 					onClick={() => setShowBasicInfo(!showBasicInfo)} 
 					onMouseDown={(event) => event.preventDefault()}>
-					<div className="inputEditor-header">
 						<i className="fa-solid fa-user"></i>
 						<h2>Basic information</h2>
 						<i className="fa-solid fa-angle-down"></i>
@@ -171,18 +195,12 @@ function App() {
 						<h2>Experience</h2>
 						<i className="fa-solid fa-angle-down"></i>
 					</div>
-					
-						{ showExperience ? 
-							<div className="inputEditor-addExperience">
-							<button onClick={addExperience}>
-								<span>
-								<i className="fa-solid fa-plus"></i>Add experience</span>	
-							</button>
-							</div>
 
+						{
+							showExperience ? 
+							<ExperienceContainer/>
 							: null
 						}
-
 
 				</div>
 
@@ -197,4 +215,6 @@ function App() {
 	);
 }
 
+
 export default App;
+

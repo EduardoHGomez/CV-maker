@@ -137,8 +137,12 @@ function App() {
 
 				<hr/>
 
-				<div>
-					<h1>Experience</h1>
+				<div className="inputEditor">
+					<div className='inputEditor-header'>
+						<i class="fa-solid fa-briefcase"></i>
+						<h2>Experience</h2>
+						<i class="fa-solid fa-angle-down"></i>
+					</div>
 				</div>
 
 			</div> {/* Left column div*/}

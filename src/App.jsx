@@ -5,6 +5,7 @@ import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 
 function App() {
+	const [showBasicInfo, setShowBasicInfo] = useState(true);
 
 	const [data, setData] = useState({
 		BasicInfo: {
@@ -53,45 +54,58 @@ function App() {
 		<div className="container">
 
 			<div className="leftColumn">
-				<div draggable="true" cursor className="inputEditor">
+				<div className="inputEditor" onClick={() => setShowBasicInfo(!showBasicInfo)} 
+				  onMouseDown={(event) => event.preventDefault()}>
 					<div className="inputEditor-header">
-						<i class="fa-solid fa-user"></i>
+						<i className="fa-solid fa-user"></i>
 						<h2>Personal Details</h2>
-						<i class="fa-solid fa-angle-down"></i>
+						<i className="fa-solid fa-angle-down"></i>
 					</div>
-					<label>
-						<b>Name</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.BasicInfo.name}
-							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
-						/>
-					</label>
-					<label>
-						<b>Email</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.BasicInfo.email}
-							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, email: event.target.value})}
-						/>
-					</label>
-					<label>
-						<b>Phone</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.BasicInfo.phone}
-							onChange={(event) => handleBasicInfoChange({...data.BasicInfo, phone: event.target.value})}
-						/>
-					</label>
+					{
+						showBasicInfo? (
+						<div>
+							<label>
+								<b>Name</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.BasicInfo.name}
+									onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+								/>
+							</label>
+							<label>
+								<b>Email</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.BasicInfo.email}
+									onChange={(event) => handleBasicInfoChange({...data.BasicInfo, email: event.target.value})}
+								/>
+							</label>
+							<label>
+								<b>Phone</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.BasicInfo.phone}
+									onChange={(event) => handleBasicInfoChange({...data.BasicInfo, phone: event.target.value})}
+								/>
+							</label>
+						</div>
+							
+						): null
+					}
+
+
+
+
+
 				</div>
 
 				<hr/>
 
 				<div className="inputEditor">
 					<div className='inputEditor-header'>
-						<i class="fa-solid fa-user-graduate"></i>
+						<i className="fa-solid fa-user-graduate"></i>
 						<h2>Education</h2>
-						<i class="fa-solid fa-angle-down"></i>
+						<i className="fa-solid fa-angle-down"></i>
 					</div>
 					<label> 
 						<b>School</b>
@@ -139,9 +153,9 @@ function App() {
 
 				<div className="inputEditor">
 					<div className='inputEditor-header'>
-						<i class="fa-solid fa-briefcase"></i>
+						<i className="fa-solid fa-briefcase"></i>
 						<h2>Experience</h2>
-						<i class="fa-solid fa-angle-down"></i>
+						<i className="fa-solid fa-angle-down"></i>
 					</div>
 				</div>
 

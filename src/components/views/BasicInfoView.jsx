@@ -7,7 +7,7 @@ function BasicInfoView({data}){
         <div className="BasicInfoView"> 
         <h1>{data.name}</h1>
         <br/>
-        <span><i className="fa-regular fa-envelope"></i> {data.email} <i class="fa-solid fa-phone"></i> {data.phone}</span>
+        <span><i className="fa-regular fa-envelope"></i> {data.email} <i className="fa-solid fa-phone"></i> {data.phone}</span>
         </div>
     );
 }

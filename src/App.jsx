@@ -5,7 +5,9 @@ import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 
 function App() {
+	const [showEducation, setShowEducation] = useState(true);
 	const [showBasicInfo, setShowBasicInfo] = useState(true);
+	const [showExperience, setShowExperience] = useState(true);
 
 	const [data, setData] = useState({
 		BasicInfo: {
@@ -54,8 +56,9 @@ function App() {
 		<div className="container">
 
 			<div className="leftColumn">
-				<div className="inputEditor" onClick={() => setShowBasicInfo(!showBasicInfo)} 
-				  onMouseDown={(event) => event.preventDefault()}>
+				<div className="inputEditor" 
+					onClick={() => setShowBasicInfo(!showBasicInfo)} 
+					onMouseDown={(event) => event.preventDefault()}>
 					<div className="inputEditor-header">
 						<i className="fa-solid fa-user"></i>
 						<h2>Personal Details</h2>
@@ -63,7 +66,7 @@ function App() {
 					</div>
 					{
 						showBasicInfo? (
-						<div>
+						<div> 
 							<label>
 								<b>Name</b>
 								<input className='inputEditor-input'
@@ -92,70 +95,85 @@ function App() {
 							
 						): null
 					}
-
-
-
-
-
 				</div>
 
 				<hr/>
 
 				<div className="inputEditor">
-					<div className='inputEditor-header'>
+					<div className='inputEditor-header'
+					onClick={() => setShowEducation(!showEducation)} 
+				  	onMouseDown={(event) => event.preventDefault()}>
 						<i className="fa-solid fa-user-graduate"></i>
 						<h2>Education</h2>
 						<i className="fa-solid fa-angle-down"></i>
 					</div>
-					<label> 
-						<b>School</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.EducationInfo.school}
-							onChange={(event) => handleEducationChange({...data.EducationInfo, school: event.target.value})}
-						/>
-					</label>
-					<label>
-						<b>Degree</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.EducationInfo.degree}
-							onChange={(event) => handleEducationChange({...data.EducationInfo, degree: event.target.value})}
-						/>
-					</label>
-					<label>
-						<b>Start date</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.EducationInfo.startDate}
-							onChange={(event) => handleEducationChange({...data.EducationInfo, startDate: event.target.value})}
-						/>
-					</label>
-					<label> 
-						<b>End date</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.EducationInfo.endDate}
-							onChange={(event) => handleEducationChange({...data.EducationInfo, endDate: event.target.value})}
-						/>
-					</label>
-					<label>
-						<b>Location</b>
-						<input className='inputEditor-input'
-							type="text"
-							value={data.EducationInfo.location}
-							onChange={(event) => handleEducationChange({...data.EducationInfo, location: event.target.value})}
-						/>
-					</label>
+					{
+						showEducation ? 
+						<div>
+							<label> 
+								<b>School</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.EducationInfo.school}
+									onChange={(event) => handleEducationChange({...data.EducationInfo, school: event.target.value})}
+								/>
+							</label>
+							<label>
+								<b>Degree</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.EducationInfo.degree}
+									onChange={(event) => handleEducationChange({...data.EducationInfo, degree: event.target.value})}
+								/>
+							</label>
+							<label>
+								<b>Start date</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.EducationInfo.startDate}
+									onChange={(event) => handleEducationChange({...data.EducationInfo, startDate: event.target.value})}
+								/>
+							</label>
+							<label> 
+								<b>End date</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.EducationInfo.endDate}
+									onChange={(event) => handleEducationChange({...data.EducationInfo, endDate: event.target.value})}
+								/>
+							</label>
+							<label>
+								<b>Location</b>
+								<input className='inputEditor-input'
+									type="text"
+									value={data.EducationInfo.location}
+									onChange={(event) => handleEducationChange({...data.EducationInfo, location: event.target.value})}
+								/>
+							</label>
+						</div>
+						: null
+					}
 				</div>
 
 				<hr/>
 
 				<div className="inputEditor">
-					<div className='inputEditor-header'>
+					<div className='inputEditor-header'
+					onClick={() => setShowExperience(!showExperience)} 
+				  	onMouseDown={(event) => event.preventDefault()}>
 						<i className="fa-solid fa-briefcase"></i>
 						<h2>Experience</h2>
 						<i className="fa-solid fa-angle-down"></i>
+
+						{ showExperience ? 
+
+							<div>
+							</div>
+
+							: null
+						}
+
+
 					</div>
 				</div>
 

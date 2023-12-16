@@ -8,7 +8,6 @@ body {
 }
 
 .rightColumn {
-    outline: #142536 1px solid;
     font-family: sans-serif;
     background-color: white;
 }
@@ -116,7 +115,6 @@ body {
     font-size: 1.15rem;
 }
 
-
 .inputEditor{
     font-family: 'Nunito Sans', sans-serif;
     border: 1px solid white; 
@@ -140,19 +138,21 @@ body {
     font-size: 0.9rem;
 }
 
-
 .inputEditor-header {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .inputEditor-header i:last-child{
     margin-top: 3px;
     margin-left: 10px;
+    color: rgb(32, 14, 50);
 }
 
 .inputEditor h2{
+    color: rgb(32, 14, 50);
     margin: 0px;
     font-family: 'Nunito Sans', sans-serif;
 }

@@ -12,9 +12,51 @@ function App() {
 	const [showExperience, setShowExperience] = useState(true);
 	const [showAddExperienceButton, setShowAddExperienceButton] = useState(true);
 
-	function addExperience() {
-		setShowAddExperienceButton(false);
+
+	function AddExperienceContainer() {
+		return (
+			<div>
+
+				<label>
+					<b>Degree</b>
+					<input className='inputEditor-input'
+						type="text"
+						value={data.BasicInfo.name}
+						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+					/>
+				</label>
+				<label>
+					<b>Degree</b>
+					<input className='inputEditor-input'
+						type="text"
+						value={data.BasicInfo.name}
+						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+					/>
+				</label>
+				<label>
+					<b>Degree</b>
+					<input className='inputEditor-input'
+						type="text"
+						value={data.BasicInfo.name}
+						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+					/>
+				</label>
+
+				<div>
+					<button className='inputEditor-button-cancel'>
+						Cancel	
+					</button>
+					<button className='inputEditor-button-save'>
+						<i class="fa-solid fa-check"></i> 
+						Save	
+					</button>
+				</div>
+
+			</div>
+		)
 	}
+
+
 
 	function ExperienceContainer() {
 
@@ -22,7 +64,7 @@ function App() {
 			return (	
 
 				<div className="inputEditor-addExperience">
-					<button onClick={addExperience}>
+					<button onClick={() => setShowAddExperienceButton(!showAddExperienceButton)}>
 						<span>
 						<i className="fa-solid fa-plus"></i>Add experience</span>	
 					</button>
@@ -31,8 +73,7 @@ function App() {
 		}
 		else {
 			return (
-				<>
-				</>
+				<AddExperienceContainer/>
 			)
 		}
 

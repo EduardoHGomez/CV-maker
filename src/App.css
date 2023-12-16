@@ -133,7 +133,7 @@ body {
     border: 1px solid white;
     background-color: rgb(243, 244, 246);
     width: 95%;
-    height: 2rem;
+    height: 2.3rem;
     font-family: 'Nunito Sans', sans-serif;
     padding: 0px 0.5rem;
     font-size: 0.9rem;
@@ -181,3 +181,37 @@ body {
     font-size: 0.95rem;
     cursor: pointer;
 }
+
+.inputEditor-button-cancel {
+    border: 0px;
+    background-color: rgb(248, 245, 245);
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 2.3rem; 
+    background-size: 200% auto;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color:rgb(12, 39, 65);
+}
+
+.inputEditor-button-save {
+    border: 0px;
+    background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97  51%, #DD5E89  100%);
+    margin: 10px;
+    padding: 15px 25px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #eee;
+    border-radius: 2.3rem; 
+    display: block;
+    font-size: 0.8rem;
+}
+
+.inputEditor-button-save:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+         

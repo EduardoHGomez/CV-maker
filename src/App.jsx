@@ -5,7 +5,7 @@ import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 
 function App() {
-	const [showEducation, setShowEducation] = useState(true);
+	const [showEducation, setShowEducation] = useState(false);
 	const [showBasicInfo, setShowBasicInfo] = useState(true);
 	const [showExperience, setShowExperience] = useState(true);
 
@@ -61,7 +61,7 @@ function App() {
 					onMouseDown={(event) => event.preventDefault()}>
 					<div className="inputEditor-header">
 						<i className="fa-solid fa-user"></i>
-						<h2>Personal Details</h2>
+						<h2>Basic information</h2>
 						<i className="fa-solid fa-angle-down"></i>
 					</div>
 					{
@@ -164,17 +164,18 @@ function App() {
 						<i className="fa-solid fa-briefcase"></i>
 						<h2>Experience</h2>
 						<i className="fa-solid fa-angle-down"></i>
-
+					</div>
+					
 						{ showExperience ? 
-
-							<div>
+							<div className="inputEditor-addExperience">
+								<span>
+								<i class="fa-solid fa-plus"></i>Add experience</span>	
 							</div>
 
 							: null
 						}
 
 
-					</div>
 				</div>
 
 			</div> {/* Left column div*/}

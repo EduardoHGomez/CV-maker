@@ -10,6 +10,7 @@ body {
 .rightColumn {
     font-family: sans-serif;
     background-color: white;
+    box-shadow: 0px 0px 26px 0px rgba(222,224,224,1);
 }
 
 /* ------- View containers ---*/
@@ -159,4 +160,16 @@ body {
 
 .inputEditor i{
     margin-right: 10px;
+}
+
+.inputEditor-addExperience {
+    display: flex;
+    border: 3px solid rgb(238, 240, 244);
+    color: rgb(32, 14, 50);
+    border-radius: 0.5rem;
+    width: 75%;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
 }

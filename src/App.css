@@ -146,6 +146,12 @@ body {
     cursor: pointer;
 }
 
+.inputEditor-addExperience-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
 .inputEditor-header i:last-child{
     margin-top: 3px;
     margin-left: 10px;
@@ -183,6 +189,7 @@ body {
 }
 
 .inputEditor-button-cancel {
+    width: 30%;
     border: 0px;
     background-color: rgb(248, 245, 245);
     padding: 15px 25px;
@@ -192,9 +199,11 @@ body {
     font-size: 0.8rem;
     font-weight: 700;
     color:rgb(12, 39, 65);
+    cursor: pointer;
 }
 
 .inputEditor-button-save {
+    width: 30%;
     border: 0px;
     background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97  51%, #DD5E89  100%);
     margin: 10px;
@@ -207,11 +216,13 @@ body {
     border-radius: 2.3rem; 
     display: block;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 .inputEditor-button-save:hover {
     background-position: right center; /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
+    cursor: pointer;
 }
          

@@ -18,31 +18,28 @@ function App() {
 			<div>
 
 				<label>
-					<b>Degree</b>
+					<b>Company</b>
 					<input className='inputEditor-input'
 						type="text"
-						value={data.BasicInfo.name}
-						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+						placeholder='Enter employer'
 					/>
 				</label>
 				<label>
-					<b>Degree</b>
+					<b>Job title</b>
 					<input className='inputEditor-input'
 						type="text"
-						value={data.BasicInfo.name}
-						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+						placeholder='Enter Job Title'
 					/>
 				</label>
 				<label>
-					<b>Degree</b>
+					<b>Description</b>
 					<input className='inputEditor-input'
 						type="text"
-						value={data.BasicInfo.name}
-						onChange={(event) => handleBasicInfoChange({...data.BasicInfo, name: event.target.value})}
+						placeholder='Describe your role and achievements'
 					/>
 				</label>
 
-				<div>
+				<div className='inputEditor-addExperience-bottom'>
 					<button className='inputEditor-button-cancel'>
 						Cancel	
 					</button>

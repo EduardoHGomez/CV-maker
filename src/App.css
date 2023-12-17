@@ -6,6 +6,10 @@ textarea:focus, input:focus {
     outline: none;
 }
 
+::-webkit-resizer {
+  display: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -133,7 +137,7 @@ textarea:focus, input:focus {
 }
 
 .inputEditor-input {
-    border-radius: 0.5rem;
+    border-radius: 0.8rem;
     border: 1px solid white;
     background-color: rgb(243, 244, 246);
     width: 95%;

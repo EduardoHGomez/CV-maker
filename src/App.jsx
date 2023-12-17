@@ -7,8 +7,8 @@ import ExperienceView from './components/views/ExperienceView'
 
 
 function App() {
+	const [showBasicInfo, setShowBasicInfo] = useState(false);
 	const [showEducation, setShowEducation] = useState(false);
-	const [showBasicInfo, setShowBasicInfo] = useState(true);
 	const [showExperience, setShowExperience] = useState(true);
 	const [showAddExperienceButton, setShowAddExperienceButton] = useState(true);
 
@@ -33,9 +33,23 @@ function App() {
 				</label>
 				<label>
 					<b>Description</b>
+					<textarea className='inputEditor-input inputEditor-textarea'
+						type="textarea"
+						placeholder='Describe your role and achievements'
+					/>
+				</label>
+				<label>
+					<b>Start date</b>
 					<input className='inputEditor-input'
 						type="text"
-						placeholder='Describe your role and achievements'
+						placeholder='Enter Start Date'
+					/>
+				</label>
+				<label>
+					<b>End date</b>
+					<input className='inputEditor-input'
+						type="text"
+						placeholder='Enter End Date'
 					/>
 				</label>
 

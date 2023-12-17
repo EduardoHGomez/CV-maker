@@ -2,6 +2,10 @@ body {
     background-color: rgb(243, 241, 238);
 }
 
+textarea:focus, input:focus {
+    outline: none;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
@@ -137,6 +141,10 @@ body {
     font-family: 'Nunito Sans', sans-serif;
     padding: 0px 0.5rem;
     font-size: 0.9rem;
+}
+
+.inputEditor-input.inputEditor-textarea {
+    padding: 8px;
 }
 
 .inputEditor-header {

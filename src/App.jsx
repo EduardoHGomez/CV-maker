@@ -11,85 +11,6 @@ function App() {
 	const [showEducation, setShowEducation] = useState(false);
 	const [showExperience, setShowExperience] = useState(true);
 	const [showAddExperienceButton, setShowAddExperienceButton] = useState(true);
-
-
-	function AddExperienceContainer() {
-		return (
-			<div>
-
-				<label>
-					<b>Company</b>
-					<input className='inputEditor-input'
-						type="text"
-						placeholder='Enter employer'
-					/>
-				</label>
-				<label>
-					<b>Job title</b>
-					<input className='inputEditor-input'
-						type="text"
-						placeholder='Enter Job Title'
-					/>
-				</label>
-				<label>
-					<b>Description</b>
-					<textarea className='inputEditor-input inputEditor-textarea'
-						type="textarea"
-						placeholder='Describe your role and achievements'
-					/>
-				</label>
-				<label>
-					<b>Start date</b>
-					<input className='inputEditor-input'
-						type="text"
-						placeholder='Enter Start Date'
-					/>
-				</label>
-				<label>
-					<b>End date</b>
-					<input className='inputEditor-input'
-						type="text"
-						placeholder='Enter End Date'
-					/>
-				</label>
-
-				<div className='inputEditor-addExperience-bottom'>
-					<button className='inputEditor-button-cancel'>
-						Cancel	
-					</button>
-					<button className='inputEditor-button-save'>
-						<i class="fa-solid fa-check"></i> 
-						Save	
-					</button>
-				</div>
-
-			</div>
-		)
-	}
-
-
-
-	function ExperienceContainer() {
-
-		if (showAddExperienceButton){
-			return (	
-
-				<div className="inputEditor-addExperience">
-					<button onClick={() => setShowAddExperienceButton(!showAddExperienceButton)}>
-						<span>
-						<i className="fa-solid fa-plus"></i>Add experience</span>	
-					</button>
-				</div>
-			)
-		}
-		else {
-			return (
-				<AddExperienceContainer/>
-			)
-		}
-
-	}
-
 	const [data, setData] = useState({
 		BasicInfo: {
 			name: 'Nathan Fielder',
@@ -124,6 +45,113 @@ function App() {
 			]
 		
 	});
+
+	const [currentEditInformation, setCurrentEditInformation] = useState({
+		'company': '',
+		'positionTitle': '',
+		'description': '',
+		'startDate': '',
+		'endDate': ''
+	});
+
+	function cancelEdit() {
+		// Delete all progress while adding a company (not necessary)
+		setShowAddExperienceButton(true);
+	}
+
+
+	const handleEditInformation = (newEditInformation) => {
+		console.log(newEditInformation);
+		setCurrentEditInformation({...currentEditInformation, currentEditInformation: newEditInformation});
+	};
+
+	function AddExperienceContainer({data}) {
+		return (
+			<div>
+
+				<label>
+					<b>Company</b>
+					<input className='inputEditor-input'
+						type="text"
+						placeholder='Enter employer'
+						value={data.company}
+						onChange={(event) => handleEditInformation({...currentEditInformation, company: event.target.value})}
+					/>
+				</label>
+				<label>
+					<b>Job title</b>
+					<input className='inputEditor-input'
+						type="text"
+						placeholder='Enter Job Title'
+						value={data.positionTitle}
+						onChange={(event) => handleEditInformation({...currentEditInformation, positionTitle: event.target.value})}
+					/>
+				</label>
+				<label>
+					<b>Description</b>
+					<textarea className='inputEditor-input inputEditor-textarea'
+						type="textarea"
+						placeholder='Describe your role and achievements'
+						value={data.description}
+						onChange={(event) => handleEditInformation({...currentEditInformation, description: event.target.value})}
+					/>
+				</label>
+				<label>
+					<b>Start date</b>
+					<input className='inputEditor-input'
+						type="text"
+						placeholder='Enter Start Date'
+						value={data.startDate}
+						onChange={(event) => handleEditInformation({...currentEditInformation, startDate: event.target.value})}
+					/>
+				</label>
+				<label>
+					<b>End date</b>
+					<input className='inputEditor-input'
+						type="text"
+						placeholder='Enter End Date'
+						value={data.endDate}
+						onChange={(event) => handleEditInformation({...currentEditInformation, endDate: event.target.value})}
+					/>
+				</label>
+
+				<div className='inputEditor-addExperience-bottom'>
+					<button className='inputEditor-button-cancel'
+							onClick={cancelEdit}>
+						Cancel	
+					</button>
+					<button className='inputEditor-button-save'>
+						<i className="fa-solid fa-check"></i> 
+						Save	
+					</button>
+				</div>
+
+			</div>
+		)
+	}
+
+
+
+	function ExperienceContainer() {
+
+		if (showAddExperienceButton){
+			return (	
+
+				<div className="inputEditor-addExperience">
+					<button onClick={() => setShowAddExperienceButton(!showAddExperienceButton)}>
+						<span>
+						<i className="fa-solid fa-plus"></i>Add Experience</span>	
+					</button>
+				</div>
+			)
+		}
+		else {
+			return (
+				<AddExperienceContainer currentEditInformation={currentEditInformation}/>
+			)
+		}
+
+	}
 
 	const handleBasicInfoChange = (newBasicInfo) => {
 		setData({...data, BasicInfo: newBasicInfo});

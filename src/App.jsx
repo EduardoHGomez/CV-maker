@@ -60,8 +60,8 @@ function App() {
 	};
 
 	
-	function AddTask() {
-		alert("Hi");
+	function addExperience(message) {
+		alert(message);
 	}
 
 

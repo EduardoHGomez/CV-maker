@@ -17,7 +17,7 @@ function ExperienceItem(props){
             <div>
                 <p><b>{experienceInformation.companyName}</b></p>
                 <p><i>{experienceInformation.positionTitle}</i></p>
-                <p>{experienceInformation.description}</p>
+                <p className="ExperienceItem-description">{experienceInformation.description}</p>
                 <br></br>
             </div>
         </div>

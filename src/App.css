@@ -108,7 +108,11 @@ textarea:focus, input:focus {
     margin-bottom: 1.4%;
 }
 
-
+.ExperienceItem-description {
+    color:rgb(29, 28, 28);
+    text-align: justify;
+    line-height: 1.35;
+}
 
 
 
@@ -129,7 +133,7 @@ textarea:focus, input:focus {
     border: 1px solid white; 
     border-radius: 0.5rem;
     padding: 10px 5% 15px;
-    width: 60%;
+    width: 48%;
     background-color: white;
     display: grid;
     grid-row-gap: 10px;
@@ -185,7 +189,7 @@ textarea:focus, input:focus {
     justify-content: center;
     align-items: center;
     justify-self: center;
-    width: 50%;
+    width: 70%;
 }
 
 .inputEditor-addExperience button{
@@ -215,7 +219,7 @@ textarea:focus, input:focus {
 }
 
 .inputEditor-button-save {
-    width: 30%;
+    width: 38%;
     border: 0px;
     background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97  51%, #DD5E89  100%);
     margin: 10px;
@@ -238,3 +242,15 @@ textarea:focus, input:focus {
     cursor: pointer;
 }
          
+.ExperienceItemEdit {
+    cursor: pointer;
+    display: grid;
+    grid-auto-flow: column;
+    width: 100%;
+    align-items: center;
+    border-bottom: 1px solid rgb(243, 239, 239);
+}
+
+.ExperienceItemEdit i{
+    justify-self: end;
+}

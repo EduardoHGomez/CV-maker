@@ -4,6 +4,7 @@ import BasicInfoView from './components/views/BasicInfoView'
 import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 import ExperienceContainer from './components/views/ExperienceContainer'
+import ExperienceEdit from './components/views/ExperienceEdit'
 
 
 function App() {
@@ -28,7 +29,9 @@ function App() {
 				{
 					'companyName': 'Coco',
 					'positionTitle': 'Associate Producer',
-					'description': 'I completed my daily tasks',
+					'description': 'In my capacity as an Associate Producer for Coco, I conscientiously handled daily tasks\
+					effective communication, contributing significantly to the successful execution of the production.',
+
 					'startDate': '01/1998',
 					'endDate': '04/2022',
 					'location': 'New York City, US'
@@ -36,7 +39,10 @@ function App() {
 				{
 					'companyName': 'Dunder Mifflin',
 					'positionTitle': 'Regional Manager',
-					'description': 'Just hanging around',
+					'description': 'As the Regional Manager at Dunder Mifflin, I oversaw operations and \
+					led a team toward common objectives. My role involved strategic planning, team motivation, and ensuring \
+					smooth day-to-day functioning. I maintained a positive work environment \
+					while contributing to the company success.',
 					'startDate': '02/2004',
 					'endDate': '08/2013',
 					'location': 'Guadalajara, Mexico'
@@ -176,6 +182,8 @@ function App() {
 						<h2>Experience</h2>
 						<i className="fa-solid fa-angle-down"></i>
 					</div>
+
+					<ExperienceEdit experienceList={data.ExperienceInfo}/>
 
 						{
 							showExperience ? 

@@ -13,7 +13,7 @@ function ExperienceForm(props) {
 
     const addNewExperience = () => {
         // First add values to CV
-        props.toggleEditing();
+        props.toggleAdding();
         props.addExperience(currentExperience);
     }
 
@@ -78,7 +78,7 @@ function ExperienceForm(props) {
 
             <div className='inputEditor-addExperience-bottom'>
                 <button className='inputEditor-button-cancel'
-                onClick={props.toggleEditing}
+                onClick={props.toggleAdding}
                 >
                     Cancel	
                 </button>

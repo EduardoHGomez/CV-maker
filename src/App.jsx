@@ -4,7 +4,7 @@ import BasicInfoView from './components/views/BasicInfoView'
 import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 import ExperienceContainer from './components/views/ExperienceContainer'
-import ExperienceEdit from './components/views/ExperienceEdit'
+import ExperienceEdit from './components/views/ExperienceEditForm'
 
 
 function App() {
@@ -65,10 +65,6 @@ function App() {
 		let newData = {...data};
 		newData.ExperienceInfo.push(message);
 		setData(newData);
-	}
-
-	function toggleEdit() {
-		setEditing(true);	
 	}
 
 
@@ -187,14 +183,11 @@ function App() {
 						<i className="fa-solid fa-angle-down"></i>
 					</div>
 
-					<ExperienceEdit experienceList={data.ExperienceInfo}
-						toggleEdit={toggleEdit}
-					/>
-
 					{
 						showExperience ? 
-						<ExperienceContainer addExperience={addExperience}
-						/>
+						<ExperienceContainer 
+						data={data.ExperienceInfo}
+						addExperience={addExperience}/>
 						: null
 					}
 

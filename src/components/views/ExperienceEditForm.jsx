@@ -4,7 +4,9 @@ import ExperienceForm from './ExperienceForm'
 function ExperienceEditForm(props) {
 
     return (
-        <h1>Form</h1>
+        <ExperienceForm
+        data={props.data}
+        />
     )
 }
 

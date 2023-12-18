@@ -6,13 +6,18 @@ import ExperiencesView from './ExperiencesView'
 function ExperienceContainer(props) {
     const [isAdding, setIsAdding] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
+    const [currentEditing, setCurrentEditing] = useState({});
 
     const toggleAdding = () => {
         setIsAdding(false);
     }
 
-    const toggleEditing = () => {
+    const toggleEditing = (itemKey) => {
         setIsEditing(true);
+        var result = props.data.filter(obj => {
+            return obj.companyName === itemKey
+        });
+        setCurrentEditing(result[0]);
     }
 
     if (isAdding) {
@@ -28,6 +33,7 @@ function ExperienceContainer(props) {
         return(
             <ExperienceEditForm
                 toggleEditing={toggleEditing}
+                data={currentEditing}
             />
         )
     } 

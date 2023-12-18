@@ -4,7 +4,7 @@ function ExperienceItem(props){
 
     return (
         <div className="ExperienceItemEdit" 
-        onClick={props.toggleEditing}
+        onClick={() => props.toggleEditing(props.itemKey)}
         >
             <h2>{props.experience.companyName}</h2>
             <i className="fa-regular fa-pen-to-square"></i>
@@ -23,9 +23,10 @@ function ExperiencesView(props) {
             {
                 experienceList.map((experience) => {
                     return <ExperienceItem 
-                    key={experience.companyName} 
-                    experience={experience}
-                    toggleEditing={props.toggleEditing}
+                        key={experience.companyName} 
+                        experience={experience}
+                        toggleEditing={props.toggleEditing}
+                        itemKey={experience.companyName}
                     />
                 })
             }

@@ -1,8 +1,20 @@
 import { useState } from 'react'
 
-function ExperienceForm(props) {
-    const [currentExperience, setCurrentExperience] = useState(props.data);
+ExperienceForm.defaultProps = {
+    data: {
+        'companyName': '',
+        'positionTitle': '',
+        'description': '',
+        'startDate' : '',
+        'location': '',
+        'endDate': ''
+    }
+}
 
+
+function ExperienceForm(props) {
+    
+    const [currentExperience, setCurrentExperience] = useState(props.data);
 
     const addNewExperience = () => {
         // First add values to CV
@@ -78,7 +90,7 @@ function ExperienceForm(props) {
                 <button className='inputEditor-button-save'
                         onClick={addNewExperience} 
                 >
-                    <i className="fa-solid fa-check"></i> 
+                <i className="fa-solid fa-check"></i> 
                     Save	
                 </button>
             </div>

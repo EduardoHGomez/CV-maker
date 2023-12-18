@@ -17,7 +17,7 @@ function ExperienceContainer(props) {
         var result = props.data.filter(obj => {
             return obj.companyName === itemKey
         });
-        setCurrentEditing(result);
+        setCurrentEditing(result[0]);
     }
 
     if (isAdding) {

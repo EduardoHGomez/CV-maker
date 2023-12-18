@@ -67,6 +67,10 @@ function App() {
 		setData(newData);
 	}
 
+	function toggleEdit() {
+		setEditing(true);	
+	}
+
 
 	return (
 		<div className="container">
@@ -183,14 +187,16 @@ function App() {
 						<i className="fa-solid fa-angle-down"></i>
 					</div>
 
-					<ExperienceEdit experienceList={data.ExperienceInfo}/>
+					<ExperienceEdit experienceList={data.ExperienceInfo}
+						toggleEdit={toggleEdit}
+					/>
 
-						{
-							showExperience ? 
-							<ExperienceContainer addExperience={addExperience}
-							/>
-							: null
-						}
+					{
+						showExperience ? 
+						<ExperienceContainer addExperience={addExperience}
+						/>
+						: null
+					}
 
 				</div>
 

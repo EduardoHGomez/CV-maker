@@ -4,7 +4,6 @@ import BasicInfoView from './components/views/BasicInfoView'
 import EducationView from './components/views/EducationView'
 import ExperienceView from './components/views/ExperienceView'
 import ExperienceContainer from './components/views/ExperienceContainer'
-import ExperienceEdit from './components/views/ExperienceEditForm'
 
 
 function App() {
@@ -61,10 +60,19 @@ function App() {
 	};
 
 	
-	function addExperience(message) {
-		let newData = {...data};
-		newData.ExperienceInfo.push(message);
-		setData(newData);
+	function saveButtonFunction(option, message) {
+		if (option === 'adding') {
+			let newData = {...data};
+			newData.ExperienceInfo.push(message);
+			setData(newData);
+		}
+		else if (option === 'editing') {
+			// Fin the element
+			let newData = {...data};
+			const index = newData.ExperienceInfo.findIndex((experience) => experience.companyName === message.companyName);
+			newData.ExperienceInfo[index] = message;
+			setData(newData);
+		}
 	}
 
 
@@ -186,8 +194,9 @@ function App() {
 					{
 						showExperience ? 
 						<ExperienceContainer 
+						saveButtonFunction={saveButtonFunction}
 						data={data.ExperienceInfo}
-						addExperience={addExperience}/>
+						/>
 						: null
 					}
 

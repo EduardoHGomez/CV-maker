@@ -16,12 +16,6 @@ function ExperienceForm(props) {
     
     const [currentExperience, setCurrentExperience] = useState(props.data);
 
-    const addNewExperience = () => {
-        // First add values to CV
-        props.toggleAdding();
-        props.addExperience(currentExperience);
-    }
-
     return (
 
         <div>
@@ -83,12 +77,15 @@ function ExperienceForm(props) {
 
             <div className='inputEditor-addExperience-bottom'>
                 <button className='inputEditor-button-cancel'
-                onClick={props.toggleAdding}
+                    onClick={props.cancelButtonFunction}
                 >
                     Cancel	
                 </button>
                 <button className='inputEditor-button-save'
-                        onClick={addNewExperience} 
+                    onClick={() => {
+                        props.saveButtonFunction(props.status, currentExperience)
+                        props.cancelButtonFunction();
+                    }}
                 >
                 <i className="fa-solid fa-check"></i> 
                     Save	

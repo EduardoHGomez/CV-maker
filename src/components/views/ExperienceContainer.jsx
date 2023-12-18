@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import ExperienceForm from './ExperienceForm'
-import ExperienceEditForm from './ExperienceEditForm'
 import ExperiencesView from './ExperiencesView'
 
 function ExperienceContainer(props) {
@@ -20,22 +19,31 @@ function ExperienceContainer(props) {
         setCurrentEditing(result[0]);
     }
 
+    const cancelEditing = () => {
+        setIsEditing(false);
+        setIsAdding(false);
+    }
+
     if (isAdding) {
         return (
             <ExperienceForm 
-            addExperience={props.addExperience} 
-            toggleAdding={toggleAdding}
+                saveButtonFunction={props.saveButtonFunction}
+                status={"adding"}
+                cancelButtonFunction={toggleAdding}
             />
         );
 
     } 
     else if (isEditing) {
         return(
-            <ExperienceEditForm
+            <ExperienceForm
+                saveButtonFunction={props.saveButtonFunction}
                 toggleEditing={toggleEditing}
+                cancelButtonFunction={cancelEditing}
                 data={currentEditing}
+                status={"editing"}
             />
-        )
+        );
     } 
     else {
         return (

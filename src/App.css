@@ -12,14 +12,14 @@ textarea:focus, input:focus {
 
 .container {
     display: grid;
-    grid-template-columns: auto 8.5in;
+    grid-template-columns: auto 8.1in;
 }
 
 .rightColumn {
     font-family: sans-serif;
     background-color: white;
     box-shadow: 0px 0px 26px 0px rgba(222,224,224,1);
-    height: 11in;
+    height: 10in;
 }
 
 /* ------- View containers ---*/
@@ -122,7 +122,6 @@ textarea:focus, input:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 26%;
 }
 
 .leftColumn b {
@@ -255,4 +254,146 @@ textarea:focus, input:focus {
 
 .ExperienceItemEdit i{
     justify-self: end;
+}
+
+@media print {
+    body {
+        visibility: hidden;
+    }
+    .rightColumn {
+        visibility: visible;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .BasicInfoView {
+        display: flex;
+        flex-direction: column;
+        background-color: rgb(23, 35, 76);
+        color: white;
+        align-items: center;
+        justify-content: center;
+        height: 130px;
+    }
+
+    .BasicInfoView h1{
+        margin: 0px;
+    }
+
+
+    .EducationInfoView {
+        background-color: white;
+        padding: 0 4%;
+    }
+
+    .EduationInfoViewHeader {
+        display: grid;
+    }
+
+    .EducationInfoView h2 {
+        margin: 0px;
+        margin-top: 1%;
+        margin-bottom: 4px;
+        color: rgb(34, 34, 34);
+        justify-self: center;
+    }
+
+    .EducationInfoViewBody {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        background-color: white;
+    }
+
+    .EducationInfoViewBodyLeft {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .EducationInfoViewBodyRight {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .EducationInfoViewBody p{
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+
+    .EducationInfoViewBody b{
+        margin: 0px;
+        margin-bottom: 5px;
+    }
+
+    /* Experience */
+    .ExperienceContainer {
+        font-family: sans-serif;
+        padding: 0 4%;
+        background-color: white;
+    }
+
+    .ExperienceContainer-header h2{
+        margin: 0px;
+        margin-top: 1%;
+        margin-bottom: 4px;
+        color: rgb(34, 34, 34);
+        justify-self: center;
+    }
+
+    .ExperienceItem {
+        display: grid;
+        grid-template-columns: .5fr 2fr;
+        grid-gap: 4.5%;
+    }
+
+    .ExperienceItem p{
+        margin: 0px;
+        margin-bottom: 1.4%;
+    }
+
+    .ExperienceItem-description {
+        color:rgb(29, 28, 28);
+        text-align: justify;
+        line-height: 1.35;
+    }
+
+}
+
+.leftColumn-header {
+    display: flex;
+    width: 65%;
+    justify-content: end;
+    margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
+}
+
+.leftColumn-header-delete {
+    margin-right: 0.75rem;
+    border: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+    height: 40px;
+    border-radius: 0.9rem;
+    font-size: medium;
+    padding: 5px 15px 5px;
+    background-color: rgb(220, 53, 69);
+    cursor: pointer;
+    color: white;
+}
+
+.leftColumn-header i{
+    margin-right: 10px;
+}
+
+.leftColumn-header-print {
+    border: 0px;
+    font-family: 'Nunito Sans', sans-serif;
+    height: 40px;
+    border-radius: 0.9rem;
+    font-size: medium;
+    padding: 5px 15px 5px;
+    background-color: rgb(95, 148, 226);
+    color: white;
+    cursor: pointer;
 }

@@ -75,11 +75,67 @@ function App() {
 		}
 	}
 
+	function printCV() {
+		print();
+	}
+
+	function resetValues() {
+		setData({
+		BasicInfo: {
+			name: 'Nathan Fielder',
+			email: 'nathan@email.com',
+			phone: '+38 44-0000-1111'
+		},
+		EducationInfo: {
+			school: 'London City University',
+			degree: 'B.Eng. in Computer Systems',
+			startDate: '12/08/2022',
+			endDate: '01/12/2026',
+			location: 'Zapopan, Jalisco, Mexico',
+		},
+		ExperienceInfo:
+			[
+				{
+					'companyName': 'Coco',
+					'positionTitle': 'Associate Producer',
+					'description': 'In my capacity as an Associate Producer for Coco, I conscientiously handled daily tasks\
+					effective communication, contributing significantly to the successful execution of the production.',
+
+					'startDate': '01/1998',
+					'endDate': '04/2022',
+					'location': 'New York City, US'
+				},
+				{
+					'companyName': 'Dunder Mifflin',
+					'positionTitle': 'Regional Manager',
+					'description': 'As the Regional Manager at Dunder Mifflin, I oversaw operations and \
+					led a team toward common objectives. My role involved strategic planning, team motivation, and ensuring \
+					smooth day-to-day functioning. I maintained a positive work environment \
+					while contributing to the company success.',
+					'startDate': '02/2004',
+					'endDate': '08/2013',
+					'location': 'Guadalajara, Mexico'
+				}
+			]
+		
+	})
+	}
 
 	return (
 		<div className="container">
 
 			<div className="leftColumn">
+				<div className="leftColumn-header">
+					<button onClick={resetValues} className='leftColumn-header-delete'>
+						<i class="fa-solid fa-trash"></i>
+						Default values
+					</button>
+					<button onClick={printCV} className='leftColumn-header-print'>
+						<i class="fa-solid fa-print"></i>
+						Print
+					</button>
+
+				</div>
 
 				<div className="inputEditor">
 					<div className="inputEditor-header"

@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import ExperienceForm from './ExperienceForm'
-import ExperienceEdit from './ExperienceEditForm'
+import ExperienceEditForm from './ExperienceEditForm'
 import ExperiencesView from './ExperiencesView'
 
 function ExperienceContainer(props) {
@@ -12,7 +12,7 @@ function ExperienceContainer(props) {
     }
 
     const toggleEditing = () => {
-        setIsEditing(false);
+        setIsEditing(true);
     }
 
     if (isAdding) {
@@ -25,14 +25,19 @@ function ExperienceContainer(props) {
 
     } 
     else if (isEditing) {
-        <ExperienceEditForm
-            toggleEditing={toggleEditing}
-        />
+        return(
+            <ExperienceEditForm
+                toggleEditing={toggleEditing}
+            />
+        )
     } 
     else {
         return (
             <>
-                <ExperiencesView experienceList={props.data}/>
+                <ExperiencesView 
+                    experienceList={props.data}
+                    toggleEditing={toggleEditing}
+                />
                 <div className="inputEditor-addExperience">
                     <button onClick={() => setIsAdding(true)}>
                         <span>

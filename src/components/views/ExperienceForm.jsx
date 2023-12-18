@@ -1,14 +1,7 @@
 import { useState } from 'react'
 
 function ExperienceForm(props) {
-    const [currentExperience, setCurrentExperience] = useState({
-        'companyName': '',
-        'positionTitle': '',
-        'description': '',
-        'startDate' : '',
-        'location': '',
-        'endDate': ''
-    });
+    const [currentExperience, setCurrentExperience] = useState(props.data);
 
 
     const addNewExperience = () => {

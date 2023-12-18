@@ -2,9 +2,12 @@ import { useState } from "react";
 import ExperienceForm from './ExperienceForm'
 
 function ExperienceEditForm(props) {
+    console.log(props.data);
 
     return (
-        <h1>Form</h1>
+        <ExperienceForm
+        data={props.data}
+        />
     )
 }
 

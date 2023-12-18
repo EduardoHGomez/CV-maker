@@ -7,6 +7,7 @@ function ExperienceContainer(props) {
             <button onClick={props.handleTask}>
                 <span>
                 <i className="fa-solid fa-plus"></i>Add Experience</span>	
+
             </button>
         </div>
     )

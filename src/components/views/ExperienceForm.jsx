@@ -1,6 +1,22 @@
 import { useState } from 'react'
 
-function ExperienceForm() {
+function ExperienceForm(props) {
+    const [currentExperience, setCurrentExperience] = useState({
+        'companyName': '',
+        'positionTitle': '',
+        'description': '',
+        'startDate' : '',
+        'location': '',
+        'endDate': ''
+    });
+
+
+    const addNewExperience = () => {
+        // First add values to CV
+        props.toggleEditing();
+
+        props.addExperience(currentExperience);
+    }
 
     return (
 
@@ -11,8 +27,8 @@ function ExperienceForm() {
                 <input className='inputEditor-input'
                     type="text"
                     placeholder='Enter employer'
-                    value={currentEditInformation.company}
-                    onChange={(event) => handleEditInformation({...currentEditInformation, company: event.target.value})}
+                    value={currentExperience.companyName}
+                    onChange={(e) => setCurrentExperience({...currentExperience, companyName: e.target.value})}
                 />
             </label>
             <label>
@@ -20,8 +36,8 @@ function ExperienceForm() {
                 <input className='inputEditor-input'
                     type="text"
                     placeholder='Enter Job Title'
-                    value={currentEditInformation.positionTitle}
-                    onChange={(event) => handleEditInformation({...currentEditInformation, positionTitle: event.target.value})}
+                    value={currentExperience.positionTitle}
+                    onChange={(e) => setCurrentExperience({...currentExperience, positionTitle: e.target.value})}
                 />
             </label>
             <label>
@@ -29,8 +45,8 @@ function ExperienceForm() {
                 <textarea className='inputEditor-input inputEditor-textarea'
                     type="textarea"
                     placeholder='Describe your role and achievements'
-                    value={currentEditInformation.description}
-                    onChange={(event) => handleEditInformation({...currentEditInformation, description: event.target.value})}
+                    value={currentExperience.description}
+                    onChange={(e) => setCurrentExperience({...currentExperience, description: e.target.value})}
                 />
             </label>
             <label>
@@ -38,8 +54,8 @@ function ExperienceForm() {
                 <input className='inputEditor-input'
                     type="text"
                     placeholder='Enter Start Date'
-                    value={currentEditInformation.startDate}
-                    onChange={(event) => handleEditInformation({...currentEditInformation, startDate: event.target.value})}
+                    value={currentExperience.startDate}
+                    onChange={(e) => setCurrentExperience({...currentExperience, startDate: e.target.value})}
                 />
             </label>
             <label>
@@ -47,17 +63,28 @@ function ExperienceForm() {
                 <input className='inputEditor-input'
                     type="text"
                     placeholder='Enter End Date'
-                    value={currentEditInformation.endDate}
-                    onChange={(event) => handleEditInformation({...currentEditInformation, endDate: event.target.value})}
+                    value={currentExperience.endDate}
+                    onChange={(e) => setCurrentExperience({...currentExperience, endDate: e.target.value})}
+                />
+            </label>
+            <label>
+                <b>Location</b>
+                <input className='inputEditor-input'
+                    type="text"
+                    placeholder='Enter Location'
+                    value={currentExperience.location}
+                    onChange={(e) => setCurrentExperience({...currentExperience, location: e.target.value})}
                 />
             </label>
 
             <div className='inputEditor-addExperience-bottom'>
                 <button className='inputEditor-button-cancel'
-                        onClick={cancelEdit}>
+                >
                     Cancel	
                 </button>
-                <button className='inputEditor-button-save'>
+                <button className='inputEditor-button-save'
+                        onClick={addNewExperience} 
+                >
                     <i className="fa-solid fa-check"></i> 
                     Save	
                 </button>

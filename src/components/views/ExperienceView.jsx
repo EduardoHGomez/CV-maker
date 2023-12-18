@@ -7,6 +7,7 @@ function ExperienceItem(props){
         experienceInformation
     } = props;
 
+
     return (
         <div className="ExperienceItem">
             <div>

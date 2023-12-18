@@ -10,7 +10,6 @@ function App() {
 	const [showBasicInfo, setShowBasicInfo] = useState(false);
 	const [showEducation, setShowEducation] = useState(false);
 	const [showExperience, setShowExperience] = useState(true);
-	const [showAddExperienceButton, setShowAddExperienceButton] = useState(true);
 	const [data, setData] = useState({
 		BasicInfo: {
 			name: 'Nathan Fielder',
@@ -46,10 +45,6 @@ function App() {
 		
 	});
 
-	function cancelEdit() {
-		// Delete all progress while adding a company (not necessary)
-		setShowAddExperienceButton(true);
-	}
 
 	const handleBasicInfoChange = (newBasicInfo) => {
 		setData({...data, BasicInfo: newBasicInfo});
@@ -61,7 +56,9 @@ function App() {
 
 	
 	function addExperience(message) {
-		alert(message);
+		let newData = {...data};
+		newData.ExperienceInfo.push(message);
+		setData(newData);
 	}
 
 
@@ -182,7 +179,7 @@ function App() {
 
 						{
 							showExperience ? 
-							<ExperienceContainer handleTask={AddTask}
+							<ExperienceContainer addExperience={addExperience}
 							/>
 							: null
 						}

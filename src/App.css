@@ -12,13 +12,14 @@ textarea:focus, input:focus {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1.3fr;
+    grid-template-columns: auto 8.5in;
 }
 
 .rightColumn {
     font-family: sans-serif;
     background-color: white;
     box-shadow: 0px 0px 26px 0px rgba(222,224,224,1);
+    height: 11in;
 }
 
 /* ------- View containers ---*/
@@ -120,8 +121,8 @@ textarea:focus, input:focus {
 .leftColumn {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 26%;
 }
 
 .leftColumn b {
@@ -133,7 +134,7 @@ textarea:focus, input:focus {
     border: 1px solid white; 
     border-radius: 0.5rem;
     padding: 10px 5% 15px;
-    width: 48%;
+    width: 55%;
     background-color: white;
     display: grid;
     grid-row-gap: 10px;
@@ -205,7 +206,7 @@ textarea:focus, input:focus {
 }
 
 .inputEditor-button-cancel {
-    width: 30%;
+    width: 40%;
     border: 0px;
     background-color: rgb(248, 245, 245);
     padding: 15px 25px;
@@ -219,7 +220,7 @@ textarea:focus, input:focus {
 }
 
 .inputEditor-button-save {
-    width: 38%;
+    width: 45%;
     border: 0px;
     background-image: linear-gradient(to right, #DD5E89 0%, #F7BB97  51%, #DD5E89  100%);
     margin: 10px;

@@ -5,7 +5,6 @@ import App from './App.jsx'
 import './App.css'
 import PersonalInfo from './components/views/BasicInfoView.jsx'
 import Animals from './examples/Animals.jsx'
-import App1 from './examples/App1.jsx'
 
 /*
 

@@ -1,20 +1,18 @@
 import { useState } from 'react'
 
-function ExperienceContainer () {
+function ExperienceContainer(props) {
+
+    return (
+        <div className="inputEditor-addExperience">
+            <button onClick={props.handleTask}>
+                <span>
+                <i className="fa-solid fa-plus"></i>Add Experience</span>	
+            </button>
+        </div>
+    )
 
 
-    if (showAddExperienceButton){
-        return (	
 
-            <div className="inputEditor-addExperience">
-                <button onClick={() => setShowAddExperienceButton(!showAddExperienceButton)}>
-                    <span>
-                    <i className="fa-solid fa-plus"></i>Add Experience</span>	
-                </button>
-            </div>
-        )
-    }
-    else {
         return (
             <div>
 
@@ -78,8 +76,6 @@ function ExperienceContainer () {
             </div>
 
         )
-    }
-
         
 }
 
